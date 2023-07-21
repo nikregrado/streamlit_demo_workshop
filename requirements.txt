@@ -1,0 +1,7 @@
+chromadb 
+langchain 
+openai
+unstructured[local-inference]
+tiktoken
+streamlit
+Pillow==9.0.0
