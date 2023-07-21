@@ -23,6 +23,7 @@ This code sample was presented on DataArt Summer School Workshop: "How to build 
 
 import nltk
 import os
+import streamlit as st
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import Chroma
 from langchain.text_splitter import CharacterTextSplitter
@@ -34,7 +35,7 @@ nltk.download('averaged_perceptron_tagger')
 
 # Create document loader
 """
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
 def create_loader():
     loader = DirectoryLoader('essays/', glob='*.txt')
